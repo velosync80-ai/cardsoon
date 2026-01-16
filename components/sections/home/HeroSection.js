@@ -24,7 +24,7 @@ export default function HeroSection() {
           </Link>
         </div>
         <div className="relative flex items-center justify-end">
-          <Image src="/images/showcase_home.png" alt="Mascot" width={550} height={350} priority />
+          <Image src="/images/showcase_home.png" alt="Mascot" width={550} height={350} priority  />
         </div>
       </div>
     </section>

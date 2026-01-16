@@ -3,29 +3,31 @@ import { useState } from "react"
 
 const faqs = [
   {
-    q: "Which gift cards can I sell on Cardsoon?",
-    a: "You can sell a wide variety of gift cards, including Amazon, Steam, Apple, Google Play, and more."
+    q: "Which bill payments do you support?",
+    a: "We support airtime, data, electricity, cable TV, and internet bills for all major Nigerian providers."
   },
   {
-    q: "Is Cardsoon a legitimate site to sell gift cards online?",
-    a: "Absolutely! Cardsoon is fully secure and trusted by thousands of users, and is known as the best gift card trading app with high rates."
+    q: "How long does it take to process payments?",
+    a: "Most payments are processed instantly. You will receive confirmation immediately after successful payment."
   },
   {
-    q: "How quickly will I receive my payment on Cardsoon?",
-    a: "Payments are processed instantly once your gift card is verified, making trading quick and hassle-free."
+    q: "Are there any transaction fees?",
+    a: "Cardsoon does not charge any platform fees for bill payments. The amount you see is what you will pay."
   },
   {
-    q: "Can I trade gift cards at any time on Cardsoon?",
-    a: "Yes! Cardsoon is available 24/7, so you can sell gift cards whenever it's convenient for you."
+    q: "Can I schedule recurring payments?",
+    a: "Yes, you can set up automatic recurring payments for regular bills like data subscriptions and cable TV."
   }
 ]
 
 export default function FaqSection() {
-  const [openIdx, setOpenIdx] = useState(0); 
+  const [openIdx, setOpenIdx] = useState(0);
   return (
     <section className="py-16 bg-[#F9FAFB]">
-      <h2 className="px-5 md:px-0 text-center text-3xl md:text-4xl font-semibold text-[#03062A] font-SFProBlack  mb-10 ">Frequently Asked <span className="text-emerald-600">Questions</span></h2>
-
+      <div className="text-center mb-10">
+        <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">Frequently Asked  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">Questions</span> </h2>
+        <p className="text-xl text-gray-600 font-SFPro">Everything you need to know about bill payments.</p>
+      </div>
       <div className="max-w-4xl mx-auto space-y-6 pt-5 px-5 md:px-0">
         {faqs.map((item, idx) => (
           <div

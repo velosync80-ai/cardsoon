@@ -22,40 +22,36 @@ export default function Footer() {
 
           <div className="md:col-span-2">
             <div className="flex items-center mb-4 w-32  justify-center">
-              <Image
-                src="/images/logo.png"
-                alt="cardsoon Logo"
-                width={128}
-                height={128}
-                className="object-contain"
-                unoptimized
-              />
+              <a href="/">
+                <Image
+                  src="/images/logo.png"
+                  alt="cardsoon Logo"
+                  width={128}
+                  height={128}
+                  className="object-contain"
+                  unoptimized
+                />
+              </a>
             </div>
             <p className="text-white text-sm font-SFPro">
               Cardsoon is your trusted platform for seamlessly converting gift cards into cash. We combine security, speed, and simplicity to ensure every transaction is smooth and hassle-free.
-
             </p>
             <Link
               href="mailto:service@cardsoon.store"
-              className="text-white hover:text-white hover:underline transition-colors"
+              className="text-white hover:text-white hover:underline transition-colors p-3 bg-[#1F3037] inline-block mt-4 font-SFPro rounded-full flex items-center w-fit pr-5 gap-3 mt-5"
             >
-              Email:&nbsp;&nbsp;service@cardsoon.store
+              <Image
+                src="/images/email_icon.png"
+                alt="Instagram"
+                width={38}
+                height={38}
+                className="object-contain"
+                unoptimized
+              />
+              Email: service@cardsoon.store
             </Link>
-            <div className="pt-4">
+            <div className="pt-5">
               <div className="flex items-center gap-4">
-                <Link
-                  href="https://www.instagram.com/cardsoon_official/"
-                  className="flex-shrink-0 flex items-center justify-center "
-                >
-                  <Image
-                    src="/images/instagram.png"
-                    alt="Instagram"
-                    width={38}
-                    height={38}
-                    className="object-contain"
-                    unoptimized
-                  />
-                </Link>
 
                 <Link
                   href="https://www.facebook.com/cardsoon/"
@@ -86,6 +82,20 @@ export default function Footer() {
                 </Link>
 
                 <Link
+                  href="https://www.instagram.com/cardsoon_official/"
+                  className="flex-shrink-0 flex items-center justify-center "
+                >
+                  <Image
+                    src="/images/instagram.png"
+                    alt="Instagram"
+                    width={38}
+                    height={38}
+                    className="object-contain"
+                    unoptimized
+                  />
+                </Link>
+
+                <Link
                   href="https://www.youtube.com/@Cardsoon"
                   className="flex-shrink-0 flex items-center justify-center "
                 >
@@ -106,7 +116,7 @@ export default function Footer() {
             <ul className="space-y-3 space-x-3 md:space-x-0">
               <li className="text-white text-lg font-SFProBold mb-3">Services</li>
               <li><Link href="#" className={`${linkClass('/1')}`}>Gift Card Exchange</Link></li>
-              <li><Link href="#" className={`${linkClass('/2')}`}>Pay Bills</Link></li>
+              <li><Link href="/pay-bills" className={`${linkClass('/pay-bills')}`}>Pay Bills</Link></li>
               <li><Link href="#" className={`${linkClass('/privacy2')}`}>Virtual Card</Link></li>
             </ul>
           </div>
@@ -114,7 +124,7 @@ export default function Footer() {
           <div>
             <ul className="space-y-3 space-x-3 md:space-x-0">
               <li className="text-white text-lg font-SFProBold mb-3">Support</li>
-              <li><Link href="/gift-cards" className={`${linkClass('/gift-cards')}`}>blog</Link></li>
+              <li><Link href={BLOG_URL} className={`${linkClass('/gift-cards')}`}>blog</Link></li>
               <li><Link href="/privacy" className={`${linkClass('/privacy')}`}>Privacy Policy</Link></li>
               <li><Link href="/terms" className={`${linkClass('/terms')}`}>Terms of Service</Link></li>
             </ul>

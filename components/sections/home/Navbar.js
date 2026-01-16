@@ -59,7 +59,7 @@ export default function Navbar() {
 
 
           <div className="flex items-center gap-2">
-            <Image src="/images/logo.png" alt="Cardsoon logo" width={200} height={35} />
+            <a href="/"> <Image src="/images/logo.png" alt="Cardsoon logo" width={200} height={35} /></a>
           </div>
 
 
@@ -91,7 +91,7 @@ export default function Navbar() {
               </span>
             </Link>
 
-            <Link href="/blog" className={navLinkClass("/blog")}>
+            <Link href={BLOG_URL} className={navLinkClass("/blog")}>
               <span className="relative inline-block">
                 Blog
                 {pathname === "/blog" && (
@@ -159,8 +159,8 @@ export default function Navbar() {
                     Home
                   </Link>
                   <Link
-                    href="/gift-cards"
-                    className={`${linkClass("/gift-cards")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
+                    href="/pay-bills"
+                    className={`${linkClass("/pay-bills")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
                     onClick={() => setMenuOpen(false)}
                   >
                     Pay Bills
