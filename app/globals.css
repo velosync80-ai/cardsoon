@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'SFPro';
+  src: url('/fonts/SF-Pro.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProMedium';
+  src: url('/fonts/SF-Pro-Medium.otf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+  
+@font-face {
+  font-family: 'SFProBold';
+  src: url('/fonts/SF-Pro-Bold.otf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+  
+@font-face {
+  font-family: 'SFProHeavy';
+  src: url('/fonts/SF-Pro-Heavy.otf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProBlack';
+  src: url('/fonts/SF-Pro-Black.otf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProSemiBold';
+  src: url('/fonts/SF-Pro-SemiBold.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LexendRegular';
+  src: url('/fonts/Lexend-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LexendBold';
+  src: url('/fonts/Lexend-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LexendExtraBold';
+  src: url('/fonts/Lexend-ExtraBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'LexendRegular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.reviews-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  display: flex;
+  width: 100%;
+}
+
+.reviews-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews-scroll-container:active {
+  cursor: grabbing;
+}
+
+.lexend-bold,
+h1,
+h2 {
+  font-family: 'LexendRegular';
+  font-weight: 700;
+}
+
+.Lexend-Medium {
+  font-family: 'LexendRegular';
+  font-weight: 500;
+}
+
+.font-SFPro {
+  font-family: 'SFPro', sans-serif;
+}
+
+.font-SFProBold {
+  font-family: 'SFProBold', sans-serif;
+}
+
+.font-SFProHeavy {
+  font-family: 'SFProHeavy', sans-serif;
+}
+
+.font-SFProSemiBold {
+  font-family: 'SFProSemiBold', sans-serif;
+}
+
+.font-SFProMedium {
+  font-family: 'SFProMedium', sans-serif;
+}
+
+.font-SFProBlack {
+  font-family: 'SFProBlack', sans-serif;
+}
+
+.Lexend-ExtraBold {
+  font-family: 'LexendExtraBold', sans-serif;
+}
+
+/* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+.theme-dark-bg {
+  background-color: #242344;
+}
+
+.theme-dark-text {
+  color: #242344;
+}
