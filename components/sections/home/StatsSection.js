@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function StatsSection() {
   return (
     <section className="bg-[#F9FAFB] py-12">
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-center gap-5 md:gap-6 lg:gap-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row grid grid-cols-2  md:grid-cols-4  justify-center gap-5 md:gap-6 lg:gap-20 px-4 sm:px-6 lg:px-8">
 
         <div className="bg-gradient-to-b from-[#0B5843] to-[#10242B] rounded-3xl flex flex-col items-center px-4 py-8 w-full md:w-[12rem] h-[190px] shadow-md md:mt-20">
           <div className="h-[56px] flex items-center justify-center">
@@ -21,7 +21,7 @@ export default function StatsSection() {
           </div>
           <div className="text-center mt-3">
             <p className="text-white text-xl font-extrabold font-SFProBold">5-Star Rated</p>
-            <p className="text-white text-base font-SFPro">by Most Users</p>
+            <p className="text-white text-sm md:text-base font-SFPro">by Most Users</p>
           </div>
         </div>
 
@@ -32,7 +32,7 @@ export default function StatsSection() {
           <div className="text-center mt-3">
             <p className="text-white text-xl font-extrabold font-SFProBold">&lt; 1 Min</p>
             <p className="text-white text-base font-SFPro">99%</p>
-            <p className="text-white text-base font-SFPro">Requests Resolved</p>
+            <p className="text-white text-sm md:text-base font-SFPro">Requests Resolved</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function StatsSection() {
           </div>
           <div className="text-center mt-3">
             <p className="text-white text-xl font-extrabold font-SFProBold">500K+</p>
-            <p className="text-white text-base font-SFPro">Downloads</p>
+            <p className="text-white text-sm md:text-base font-SFPro">Downloads</p>
           </div>
         </div>
 

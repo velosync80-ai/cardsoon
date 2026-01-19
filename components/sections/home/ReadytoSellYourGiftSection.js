@@ -7,7 +7,7 @@ import { trackEvent } from '@/lib/analytics'
 export default function ReadytoSellYourGiftSection() {
   return (
     <section className="bg-[#F9FAFB] pb-20">
-      <div className="max-w-7xl mx-auto  bg-[#191f24] bg-[url('/images/footer_bg.png')] bg-cover bg-center bg-no-repeat rounded-0 md:rounded-3xl">
+      <div className="max-w-7xl mx-auto  bg-[#191f24] md:bg-[url('/images/footer_bg.png')] bg-[url('/images/mobile_bg.png')] bg-cover bg-center bg-no-repeat rounded-0 md:rounded-3xl">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-11 items-center px-7 pt-10 md:pt-0">
           <div className="flex flex-col gap-5">
             <h3 className="text-white font-bold text-3xl md:text-4xl font-SFProBold">Ready to Trade Your Gift Cards?</h3>
