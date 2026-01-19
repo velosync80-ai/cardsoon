@@ -8,7 +8,7 @@ import Navbar from '@/components/sections/home/Navbar'
 export default function HeroSection() {
   return (
     <section className="pt-10 pb-20 px-4 md:px-0 bg-gradient-to-br from-[#102b36] to-[#0d242b] relative overflow-hidden   py-10 pb-0 md:py-20 md:pt-10 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/bg1.png')" }}
+      style={{ backgroundImage: "url('/images/bg_home.png')" }}
     >
       <Navbar />
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">

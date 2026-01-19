@@ -10,8 +10,8 @@ import Link from 'next/link'
 import { Metadata } from 'next' 
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Cardsoon',
-  description: 'Read Cardsoon’s Terms & Conditions to understand user rights, responsibilities, platform rules, and service usage guidelines.',
+  title: 'Pay Bills Online Easily | Cardsoon Gift Card Trading App',
+  description: 'Pay your bills online in Nigeria with Cardsoon. Buy airtime, data, and pay utility bills quickly and securely in one place.',
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',

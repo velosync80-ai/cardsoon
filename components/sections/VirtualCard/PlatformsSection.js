@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { PlatformCarousel } from '@/components/sections/VirtualCard/platform-carousel';
 
 const features = [
   {
@@ -27,51 +28,33 @@ const features = [
   },
 ]
 
+const platforms = [
+  { name: 'Uber', logo: 'https://cdn.worldvectorlogo.com/logos/uber.svg' },
+  { name: 'Amazon', logo: 'https://cdn.worldvectorlogo.com/logos/logo-amazon.svg' },
+  { name: 'Shopify', logo: 'https://cdn.worldvectorlogo.com/logos/shopify-2.svg' },
+  { name: 'Netflix', logo: 'https://cdn.worldvectorlogo.com/logos/netflix-3.svg' },
+  { name: 'Google', logo: 'https://cdn.worldvectorlogo.com/logos/google-1-1.svg' },
+  { name: 'Airbnb', logo: 'https://cdn.worldvectorlogo.com/logos/airbnb.svg' },
+  { name: 'Spotify', logo: 'https://cdn.worldvectorlogo.com/logos/spotify-logo.svg' },
+  { name: 'YouTube', logo: 'https://cdn.worldvectorlogo.com/logos/youtube-6.svg' },
+  { name: 'Uber Eats', logo: 'https://cdn.worldvectorlogo.com/logos/uber-2.svg' },
+  { name: 'Xbox', logo: 'https://cdn.worldvectorlogo.com/logos/xbox-9.svg' },
+];
+
+
 export default function PlatformsSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
 
-
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 ">
-        <div className='px-5 md:px-0'>
           <div className="mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">Why do you need a  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">Virtual Dollar Card?</span></h2>
-            <p className="text-xl text-gray-600 font-SFPro">Unlock the benefits of digital payments.</p>
-          </div>
-
-          <div className="relative">
-            <div className="relative z-10 p-10 transform hover:scale-105 transition-transform duration-300">
-              <Image src="/images/virtual_mobile.webp" className='mx-auto w-4/5 h-[400px] object-cover object-top' alt="Mascot" width={490} height={200} priority />
-            </div>
-            <div className="absolute -top-6 -right-6 w-72 h-72 bg-emerald-400 rounded-full blur-3xl opacity-20"></div>
-            <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-teal-400 rounded-full blur-3xl opacity-20"></div>
+            <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">Make payments in thousands of  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">platforms</span></h2>
+            <p className="text-xl text-gray-600 font-SFPro">Your card works everywhere you need it.</p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-7 px-5 md:px-7 pt-5 max-w-6xl mx-auto">
-          {features.map((item) => (
-            <div
-              key={item.title}
-              className="relative bg-white rounded-xl p-5 flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm group hover:shadow-xl transition-all duration-300"
-            >
-
-              <div className='flex gap-5'>
-                <div
-                  className={`w-14 h-14 bg-gradient-to-br from-[#0B8057] to-[#087f54] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
-                  dangerouslySetInnerHTML={{ __html: item.icon }}
-                />
-
-                <div>
-                  <div className="font-bold text-lg md:text-xl font-SFProSemiBold text-[#1A1A1A] mb-2">
-                    {item.title}
-                  </div>
-                  <div className="text-gray-600 font-SFPro text-base">
-                    {item.description}
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          ))}
+        <div className="py-8">
+          <PlatformCarousel platforms={platforms} autoScroll={true} scrollSpeed={40} bgColor="white" />
         </div>
       </div>
     </section>

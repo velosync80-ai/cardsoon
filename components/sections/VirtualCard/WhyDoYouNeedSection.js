@@ -1,31 +1,29 @@
 import Image from 'next/image'
+import { Card, CardContent } from '@/components/sections/VirtualCard/card';
+import { Zap, Lock, Globe, Plane } from 'lucide-react';
 
-const features = [
+const whyNeedReasons = [
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap w-7 h-7 text-white"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>',
+    icon: Zap,
     title: 'Instant Card Creation',
-    bg_color: 'from-green-500 to-emerald-600',
     description: 'Get a working virtual card in just seconds without waiting for physical delivery.',
   },
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-lock w-7 h-7 text-white"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>',
+    icon: Lock,
     title: 'Maximum Security',
-    bg_color: 'from-yellow-500 to-orange-600',
     description: 'Keep your main bank account safe with unique card numbers for each merchant.',
   },
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-globe w-7 h-7 text-white"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>',
+    icon: Globe,
     title: 'Global Acceptance',
-    bg_color: 'from-purple-500 to-pink-600',
     description: 'Use your card on any platform that accepts Visa or Mastercard worldwide.',
   },
   {
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-plane w-7 h-7 text-white"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>',
+    icon: Plane,
     title: 'Manage Your Budget',
-    bg_color: 'from-red-500 to-rose-600',
     description: 'Set spending limits and freeze cards instantly to control your finances.',
   },
-]
+];
 
 export default function WhyDoYouNeedSection() {
   return (
@@ -48,30 +46,23 @@ export default function WhyDoYouNeedSection() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-5 md:gap-7 px-5 md:px-7 pt-5 max-w-6xl mx-auto">
-          {features.map((item) => (
-            <div
-              key={item.title}
-              className="relative bg-white rounded-xl p-5 flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm group hover:shadow-xl transition-all duration-300"
-            >
-
-              <div className='flex gap-5'>
-                <div
-                  className={`w-14 h-14 bg-gradient-to-br from-[#0B8057] to-[#087f54] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
-                  dangerouslySetInnerHTML={{ __html: item.icon }}
-                />
-
-                <div>
-                  <div className="font-bold text-lg md:text-xl font-SFProSemiBold text-[#1A1A1A] mb-2">
-                    {item.title}
+          <div className="grid gap-6">
+            {whyNeedReasons.map((reason, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#0B8057] to-[#087f54] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <reason.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold mb-2 font-SFProSemiBold">{reason.title}</h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">{reason.description}</p>
+                    </div>
                   </div>
-                  <div className="text-gray-600 font-SFPro text-base">
-                    {item.description}
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

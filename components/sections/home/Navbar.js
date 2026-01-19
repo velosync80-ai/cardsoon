@@ -166,8 +166,8 @@ export default function Navbar() {
                     Pay Bills
                   </Link>
                   <Link
-                    href="/gift-cards"
-                    className={`${linkClass("/gift-cards")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
+                    href="/virtual-card"
+                    className={`${linkClass("/virtual-card")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
                     onClick={() => setMenuOpen(false)}
                   >
                     Virtual Card

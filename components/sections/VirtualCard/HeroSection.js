@@ -12,7 +12,7 @@ export default function HeroSection() {
     <>
       <section className=" relative overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white py-20"
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-5 md:px-0">
           <div className="pt-10 flex flex-col gap-6">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-lg text-white px-4 py-2 rounded-full text-sm font-medium w-fit font-SFProSemiBold">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-globe w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>

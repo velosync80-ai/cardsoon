@@ -18,7 +18,7 @@ export default function HeroSection() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap w-4 h-4"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
               <span>Instant Bill Payment</span>
             </div>
-            <h1 className="text-black font-bold text-4xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProHeavy mb-4 text-center lg:text-left ">Pay Your Bills <br className='hidden md:block' /> <span className='text-teal-600'>Instantly</span></h1>
+            <h1 className="text-black font-bold text-4xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProHeavy mb-4 text-left ">Pay Your Bills <br className='hidden md:block' /> <span className='text-teal-600'>Instantly</span></h1>
             <p className="text-gray-600 max-w-lg mb-4 text-lg font-SFPro">Recharge airtime, buy data, pay for electricity, cable TV, and more. All in one place, all in seconds.</p>
 
             <div className="flex items-center space-x-8">
