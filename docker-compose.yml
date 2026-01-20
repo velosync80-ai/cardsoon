@@ -1,0 +1,19 @@
+services:
+  cardsoon-official:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cardsoon-official:latest
+    container_name: cardsoon-official
+    ports:
+      - "2000:3000"
+    networks:
+      - cardsoon-official_net
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+    restart: always
+
+networks:
+  cardsoon-official_net:
+    driver: bridge
