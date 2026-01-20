@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import logo from "../../../public/images/logo.png";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
-
+import { ChevronRight } from 'lucide-react'
 import { useState, useRef, useEffect } from "react";
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
   const BLOG_URL = process.env.NEXT_PUBLIC_BLOG_URL || "#";
 
   const linkClass = (path) =>
-    `font-semibold transition-colors font-SFProBold ${pathname === path
+    `font-SFProBold ${pathname === path
       ? "text-green-500 "
       : "text-gray-900 hover:text-green-400"
     }`;
@@ -23,13 +23,19 @@ export default function Navbar() {
   const linkClassHeader = (path) =>
     `sticky top-0 z-50 ${pathname === path
       ? "pb-10"
-      : "bg-gray-900 pb-0"
+      : "bg-[#198057] pb-0"
     }`;
 
   const navLinkClass = (path) =>
     `relative font-SFProSemiBold transition-colors
    ${pathname === path ? 'text-white ' : 'text-white/60 hover:text-white'}`;
 
+  const menuItems = [
+    { title: 'Home', href: '/' },
+    { title: 'Pay Bills', href: '/pay-bills' },
+    { title: 'Virtual Card', href: '/virtual-card' },
+    { title: 'Blog', href: BLOG_URL },
+  ]
 
   const menuButtonRef = useRef();
 
@@ -55,11 +61,11 @@ export default function Navbar() {
   return (
     <nav className={`${linkClassHeader("/")}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
-        <div className="flex items-center justify-between h-20 gap-4">
+        <div className="flex items-center justify-between h-20 md:h-20 gap-4">
 
 
           <div className="flex items-center gap-2">
-            <a href="/"> <Image src="/images/logo.png" alt="Cardsoon logo" width={200} height={35} /></a>
+            <a href="/"> <Image src="/images/logo.png" alt="Cardsoon logo" width={200} height={35} className="w-[130px] md:w-fit" /></a>
           </div>
 
 
@@ -102,7 +108,11 @@ export default function Navbar() {
 
             <Link
               href="https://app.cardsoon.store/"
-              className="bg-[#058057] text-white font-bold py-2 px-10 rounded-full shadow-lg hover:bg-green-400 transition"
+               onClick={() => {
+                setOpen(true)
+                trackEvent('click_get_app_header', 'Custom Event', 'Homepage - Header')
+              }}
+              className={`bg-[#058057] text-white font-bold py-2 px-10 rounded-full ${pathname === '/' ? '':'bg-black/40'} shadow-lg hover:bg-black/40 transition`}
             >
               Get the App
             </Link>
@@ -141,44 +151,57 @@ export default function Navbar() {
             {menuOpen && (
               <div
                 ref={menuRef}
-                className="absolute right-0 top-20 mt-0 w-full shadow-lg bg-white z-50 border animate-fade-in"
+                className="absolute right-0 top-0 w-full shadow-lg bg-white z-50 border animate-fade-in"
               >
-                <div className="flex flex-col py-2">
-                  <Link
-                    href="https://app.cardsoon.store/"
-                    className="w-fit md:flex bg-green-500 hover:bg-green-600 text-white px-6 py-2 m-6 my-2 rounded font-semibold transition-colors whitespace-nowrap"
-                    onClick={() => trackEvent('click_get_app_header', 'CTA Click', 'Homepage - Header')}
+                <div className="flex items-center justify-between h-[50px] px-5 pt-3 gap-4">
+
+                  <div className="flex items-center gap-2">
+                    <a href="/"> <Image src="/images/logo_dark.png" alt="Cardsoon logo" width={200} height={35} className="w-[130px] md:w-fit" /></a>
+                  </div>
+
+
+                  <button
+                    ref={menuButtonRef}
+                    onClick={() => setMenuOpen(prev => !prev)}
+                    className=" rounded focus:outline-none"
+                    aria-label="Toggle menu"
                   >
-                    Get the App
-                  </Link>
-                  <Link
-                    href="/"
-                    className={`${linkClass("/")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="/pay-bills"
-                    className={`${linkClass("/pay-bills")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Pay Bills
-                  </Link>
-                  <Link
-                    href="/virtual-card"
-                    className={`${linkClass("/virtual-card")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium border-b`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Virtual Card
-                  </Link>
-                  <Link
-                    href={BLOG_URL}
-                    className={`${linkClass("/blog")} px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Blog
-                  </Link>
+                    {menuOpen ? (
+                      <svg
+                        className="w-7 h-7 text-white"
+                        fill="none"
+                        stroke="#272636"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-7 h-7 text-white"
+                        fill="none"
+                        stroke="#272636"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+                <hr className="mt-2"/>
+                <div className="flex flex-col py-0 ">
+                  {menuItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className={`${linkClass(item.href)} flex justify-between items-center px-6 py-3 hover:bg-gray-100 text-gray-900 text-base font-medium font-SFProSemiBold`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.title}
+                      <ChevronRight size={20} className="text-gray-400" />
+                    </Link>
+                  ))}
                 </div>
               </div>
             )}

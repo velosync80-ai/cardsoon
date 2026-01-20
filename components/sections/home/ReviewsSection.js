@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ReviewsCarousel } from "./reviews-carousel";
 
 const reviews = [
   {
@@ -21,12 +22,28 @@ const reviews = [
   },
 ]
 
+const platforms = [
+  { name: 'Chinedu A., Lagos', logo: 'https://cdn.worldvectorlogo.com/logos/uber.svg' },
+  { name: 'Amazon', logo: 'https://cdn.worldvectorlogo.com/logos/logo-amazon.svg' },
+  { name: 'Shopify', logo: 'https://cdn.worldvectorlogo.com/logos/shopify-2.svg' },
+  { name: 'Netflix', logo: 'https://cdn.worldvectorlogo.com/logos/netflix-3.svg' },
+  { name: 'Google', logo: 'https://cdn.worldvectorlogo.com/logos/google-1-1.svg' },
+  { name: 'Airbnb', logo: 'https://cdn.worldvectorlogo.com/logos/airbnb.svg' },
+  { name: 'Spotify', logo: 'https://cdn.worldvectorlogo.com/logos/spotify-logo.svg' },
+  { name: 'YouTube', logo: 'https://cdn.worldvectorlogo.com/logos/youtube-6.svg' },
+  { name: 'Uber Eats', logo: 'https://cdn.worldvectorlogo.com/logos/uber-2.svg' },
+  { name: 'Xbox', logo: 'https://cdn.worldvectorlogo.com/logos/xbox-9.svg' },
+];
 export default function ReviewsSection() {
   return (
     <section className="py-16 bg-white">
       <h2 className="px-5 md:px-0 text-center text-3xl md:text-4xl font-bold text-[#03062A] font-SFProBlack  mb-10 ">Reviews</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+      <div className="px-4 max-w-7xl mx-auto">
+        <ReviewsCarousel reviews={reviews} autoScroll={true} scrollSpeed={40} bgColor="white" />
+
+      </div>
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
         {reviews.map((review, i) => (
           <div
             key={review.name}
@@ -46,7 +63,7 @@ export default function ReviewsSection() {
             <div className="italic text-[#444444] text-[15px] font-SFPro font-bold">{`${review.text}`}</div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }

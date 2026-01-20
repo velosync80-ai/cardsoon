@@ -46,7 +46,7 @@ export default function PlatformsSection() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16"> 
 
           <div className="mb-10">
             <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">Make payments in thousands of  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">platforms</span></h2>

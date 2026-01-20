@@ -15,11 +15,9 @@ export default function Footer() {
     }`;
 
   return (
-    <footer className="bg-[#14262C] py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 mb-6">
-
+    <footer className="bg-[#14262C] py-16 pb-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 mb-5">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4 w-32  justify-center">
               <a href="/">
@@ -38,12 +36,12 @@ export default function Footer() {
             </p>
             <Link
               href="mailto:service@cardsoon.store"
-              className="text-white hover:text-white hover:underline transition-colors p-3 bg-[#1F3037] inline-block mt-4 font-SFPro rounded-full flex items-center w-fit pr-5 gap-3 mt-5"
+              className="text-white hover:text-white hover:underline hidden md:flex transition-colors p-2 bg-[#1F3037] inline-block mt-4 font-SFPro rounded-full flex items-center w-fit pr-4 gap-3 mt-5 text-sm"
             >
               <Image
                 src="/images/email_icon.png"
                 alt="Instagram"
-                width={38}
+                width={30}
                 height={38}
                 className="object-contain"
                 unoptimized
@@ -60,8 +58,8 @@ export default function Footer() {
                   <Image
                     src="/images/facebook.png"
                     alt="Facebook"
-                    width={38}
-                    height={38}
+                    width={30}
+                    height={30}
                     className="object-contain"
                     unoptimized
                   />
@@ -74,8 +72,8 @@ export default function Footer() {
                   <Image
                     src="/images/tiktok.png"
                     alt="TikTok"
-                    width={38}
-                    height={38}
+                    width={30}
+                    height={30}
                     className="object-contain"
                     unoptimized
                   />
@@ -88,8 +86,8 @@ export default function Footer() {
                   <Image
                     src="/images/instagram.png"
                     alt="Instagram"
-                    width={38}
-                    height={38}
+                    width={30}
+                    height={30}
                     className="object-contain"
                     unoptimized
                   />
@@ -102,8 +100,8 @@ export default function Footer() {
                   <Image
                     src="/images/youtube.png"
                     alt="YouTube"
-                    width={38}
-                    height={38}
+                    width={30}
+                    height={30}
                     className="object-contain"
                     unoptimized
                   />
@@ -111,30 +109,70 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          <div>
-            <ul className="space-y-3 space-x-3 md:space-x-0">
-              <li className="text-white text-lg font-SFProBold mb-3">Services</li>
-              <li><Link href="#" className={`${linkClass('/1')}`}>Gift Card Exchange</Link></li>
-              <li><Link href="/pay-bills" className={`${linkClass('/pay-bills')}`}>Pay Bills</Link></li>
-              <li><Link href="#" className={`${linkClass('/privacy2')}`}>Virtual Card</Link></li>
-            </ul>
+ 
+          <div className="grid grid-cols-2 gap-8 md:col-span-2 md:grid-cols-2"> 
+            <div>
+              <ul className="space-y-3">
+                <li className="text-white text-lg font-SFProBold mb-3">Services</li>
+                <li>
+                  <Link href="/" className={linkClass('/1')}>
+                    Gift Card Exchange
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pay-bills" className={linkClass('/pay-bills')}>
+                    Pay Bills
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={linkClass('/privacy2')}>
+                    Virtual Card
+                  </Link>
+                </li>
+              </ul>
+            </div>
+ 
+            <div>
+              <ul className="space-y-3">
+                <li className="text-white text-lg font-SFProBold mb-3">Support</li>
+                <li>
+                  <Link href={BLOG_URL} className={linkClass('/gift-cards')}>
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className={linkClass('/privacy')}>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className={linkClass('/terms')}>
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <ul className="space-y-3 space-x-3 md:space-x-0">
-              <li className="text-white text-lg font-SFProBold mb-3">Support</li>
-              <li><Link href={BLOG_URL} className={`${linkClass('/gift-cards')}`}>blog</Link></li>
-              <li><Link href="/privacy" className={`${linkClass('/privacy')}`}>Privacy Policy</Link></li>
-              <li><Link href="/terms" className={`${linkClass('/terms')}`}>Terms of Service</Link></li>
-            </ul>
-          </div>
-          <div>
-
-          </div>
+        </div>
+        <div className="flex item-center justify-center mb-4 md:hidden">
+          <Link
+            href="mailto:service@cardsoon.store"
+            className="text-white hover:text-white hover:underline transition-colors p-3 bg-[#1F3037] inline-block mt-4 font-SFPro rounded-full flex items-center w-fit pr-5 gap-3 mt-5"
+          >
+            <Image
+              src="/images/email_icon.png"
+              alt="Email"
+              width={38}
+              height={38}
+              className="object-contain"
+              unoptimized
+            />
+            Email: service@cardsoon.store
+          </Link>
         </div>
         <hr />
-        <div className="text-center font-SFPro text-white/70 mt-8">
+        <div className="text-center text-sm font-SFPro text-white/70 mt-5">
           <p>© 2026 Cardsoon. All rights reserved.</p>
         </div>
       </div>

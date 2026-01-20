@@ -13,12 +13,12 @@ export default function HeroSection() {
       <section className=" relative overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white py-20"
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-5 md:px-0">
-          <div className="pt-10 flex flex-col gap-6">
+          <div className="pt-0 md:pt-10  flex flex-col gap-6">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-lg text-white px-4 py-2 rounded-full text-sm font-medium w-fit font-SFProSemiBold">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-globe w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
               <span>Shop Globally</span>
             </div>
-            <h1 className="text-white font-bold text-4xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProBold mb-4 text-center lg:text-left ">Your Gateway to <br className='hidden md:block' /> <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>Global Payments</span></h1>
+            <h1 className="text-white font-bold text-5xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProBold mb-4 text-left ">Your Gateway to <br className='hidden md:block' /> <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>Global Payments</span></h1>
             <p className="text-white mb-4 text-xl font-SFPro">Create virtual dollar cards instantly and pay for international subscriptions, online shopping, and digital services worldwide.</p>
 
             <div className="flex items-center space-x-8">
@@ -36,7 +36,6 @@ export default function HeroSection() {
             <button
               onClick={() => {
                 setOpen(true)
-                trackEvent('click_get_app_header', 'CTA Click', 'Homepage - Header')
               }}
               className="w-fit inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors bg-gradient-to-r from-[#0B8057] to-[#087f54] hover:from-[#087f54] hover:to-[#0B8057] text-white text-lg h-14 px-8 rounded-md"
             >
@@ -47,8 +46,8 @@ export default function HeroSection() {
             </button>
 
           </div>
-          <div className="relative z-10 bg-gradient-to-br from-[#0B8057] to-[#087f54] rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-300">
-            <Image src="/images/showcase_card.png" alt="Mascot" width={490} height={200} priority className="w-full" />
+          <div className="relative z-10  rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+            <Image src="/images/showcase_virtualCard.png" alt="showcase virtualCard" width={490} height={200} priority className="w-full" />
           </div>
         </div>
       </section>
@@ -66,9 +65,9 @@ export default function HeroSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-x w-6 h-6"
                 >
                   <path d="M18 6 6 18"></path>

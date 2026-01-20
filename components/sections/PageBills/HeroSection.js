@@ -10,7 +10,7 @@ export default function HeroSection() {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <section className=" relative overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-emerald-50 py-20 px-4 md:px-0 bg-gradient-to-br from-[#102b36] to-[#0d242b] relative overflow-hidden"
+      <section className=" relative overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-emerald-50 py-20 pt-10 md:pt-20 px-4 md:px-0 bg-gradient-to-br from-[#102b36] to-[#0d242b] relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="pt-10 flex flex-col gap-6">
@@ -18,7 +18,7 @@ export default function HeroSection() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-zap w-4 h-4"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
               <span>Instant Bill Payment</span>
             </div>
-            <h1 className="text-black font-bold text-4xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProHeavy mb-4 text-left ">Pay Your Bills <br className='hidden md:block' /> <span className='text-teal-600'>Instantly</span></h1>
+            <h1 className="text-black font-bold text-5xl md:text-5xl leading-[1.5] lg:leading-[1.2] lg:text-6xl leading-tight font-SFProSemiBold mb-4 text-left ">Pay Your Bills <br className='hidden md:block' /> <span className='text-teal-600'>Instantly</span></h1>
             <p className="text-gray-600 max-w-lg mb-4 text-lg font-SFPro">Recharge airtime, buy data, pay for electricity, cable TV, and more. All in one place, all in seconds.</p>
 
             <div className="flex items-center space-x-8">
@@ -32,19 +32,17 @@ export default function HeroSection() {
                 <div className="text-sm text-gray-600 font-SFPro">Processing</div>
               </div>
             </div>
-            <Link
-              href="https://app.cardsoon.store/"
+            <button
               className="w-fit inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 rounded-md bg-gradient-to-r from-[#0B8057] to-[#087f54] hover:from-[#087f54] hover:to-[#0B8057] text-white text-lg h-14 px-8"
               onClick={() => {
                 setOpen(true)
-                trackEvent('click_get_app_header', 'CTA Click', 'Homepage - Header')
               }}
             >
               Start Paying Bills <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right ml-2 w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </Link>
+            </button>
           </div>
           <div className="relative flex items-center justify-center">
-            <Image src="/images/app-paybill.webp" alt="Mascot" width={250} height={200} priority />
+            <Image src="/images/app-paybill.png" alt="Start Paying" width={250} height={200} priority />
           </div>
         </div>
       </section>
@@ -54,7 +52,7 @@ export default function HeroSection() {
 
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <h2 className="font-bold text-gray-900">Download Cardsoon</h2>
-              <button className="text-gray-400 hover:text-gray-600 transition-colors">
+              <button onClick={() => { setOpen(false) }} className="text-gray-400 hover:text-gray-600 transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -62,9 +60,9 @@ export default function HeroSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-x w-6 h-6"
                 >
                   <path d="M18 6 6 18"></path>

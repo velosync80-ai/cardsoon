@@ -20,7 +20,7 @@ export default function PrivacyPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-        <h1 className="text-xl md:text-4xl text-center font-bold mb-8">
+        <h1 className="text-4xl text-center font-bold mb-8">
           <span className="text-[#222423] font-SFProBold">Privacy Policy </span>
         </h1>
 

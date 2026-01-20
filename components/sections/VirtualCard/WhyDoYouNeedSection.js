@@ -34,12 +34,12 @@ export default function WhyDoYouNeedSection() {
         <div className='px-5 md:px-0'>
           <div className="mb-10">
             <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">Why do you need a  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">Virtual Dollar Card?</span></h2>
-            <p className="text-xl text-gray-600 font-SFPro">Unlock the benefits of digital payments.</p>
+            <p className="text-lg md:text-xl text-gray-600 font-SFPro">Unlock the benefits of digital payments.</p>
           </div>
 
           <div className="relative">
             <div className="relative z-10 p-10 transform hover:scale-105 transition-transform duration-300">
-              <Image src="/images/virtual_mobile.webp" className='mx-auto w-4/5 h-[400px] object-cover object-top' alt="Mascot" width={490} height={200} priority />
+              <Image src="/images/virtual_mobile.webp" className='mx-auto w-4/5 h-[390px] object-cover object-top' alt="virtual mobile" width={490} height={200} priority />
             </div>
             <div className="absolute -top-6 -right-6 w-72 h-72 bg-emerald-400 rounded-full blur-3xl opacity-20"></div>
             <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-teal-400 rounded-full blur-3xl opacity-20"></div>

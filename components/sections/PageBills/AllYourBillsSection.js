@@ -42,7 +42,7 @@ const billTypes = [
 
 export default function AllYourBillsSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white px-4 md:px-0">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold font-SFProSemiBold mb-4">All Your <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent ">Bills</span> in One Place</h2>
         <p className="text-xl text-gray-600 font-SFPro">Pay for all your essential services conveniently.</p>
